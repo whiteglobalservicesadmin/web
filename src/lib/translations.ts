@@ -58,7 +58,7 @@ export const translations = {
           {
             icon: 'sparkles',
             title: 'Professional Cleaning',
-            description: 'Commercial cleaning services delivered with quality and reliability.',
+            description: 'Private and commercial cleaning in Slagelse and surroundings - regular home cleaning, deep cleans, move-out cleaning and office cleaning.',
           },
           {
             icon: 'package',
@@ -135,11 +135,12 @@ export const translations = {
       },
       cleaning: {
         title: 'Cleaning Services (Rengøring)',
-        intro: 'Professional cleaning solutions for commercial clients—delivered with quality and reliability.',
+        intro: 'Professional cleaning in Slagelse and surroundings - for private homes and businesses, with flexible agreements tailored to your needs.',
         features: [
-          'Office & commercial cleaning',
-          'Flexible service contracts',
-          'Quality-controlled and supervised staff',
+          'Private home cleaning: regular weekly or biweekly cleaning, deep cleans, move-out cleaning and window cleaning',
+          'Commercial cleaning for offices, clinics and shops - flexible contracts and fixed schedules',
+          'Service area: Slagelse and surroundings, incl. Korsør, Skælskør, Vemmelev, Sørup and Dalmose',
+          'A fixed plan that fits your home or business',
         ],
       },
       trading: {
@@ -238,18 +239,21 @@ export const translations = {
         company: 'Company',
         email: 'Email',
         phone: 'Phone',
+        address: 'Address (for cleaning quotes)',
         service: 'Service Interest',
         servicePlaceholder: 'Select a service',
         serviceOptions: {
           transport: 'Transport Services',
           importExport: 'Import/Export Consultancy',
-          cleaning: 'Cleaning Services',
+          privateCleaning: 'Private Home Cleaning (Privat rengøring)',
+          cleaning: 'Commercial Cleaning',
           trading: 'International Trading',
           other: 'Other',
         },
         message: 'Message',
         submit: 'Send Message',
         success: 'Thank you for your message! We will get back to you within 1-2 business days.',
+        error: 'Sorry, your message could not be sent. Please email info@whiteglobalservices.com or call +45 71 49 77 00.',
       },
       faq: {
         title: 'Frequently Asked Questions',
@@ -363,7 +367,7 @@ You have the right to access, correct, or delete your personal data. To exercise
           {
             icon: 'sparkles',
             title: 'Professionel Rengøring',
-            description: 'Erhvervsrengøring leveret med kvalitet og pålidelighed.',
+            description: 'Privat rengøring og erhvervsrengøring i Slagelse og omegn - fast rengøring, hovedrengøring, flytterengøring og kontorrengøring.',
           },
           {
             icon: 'package',
@@ -439,12 +443,13 @@ You have the right to access, correct, or delete your personal data. To exercise
         ],
       },
       cleaning: {
-        title: 'Rengøring',
-        intro: 'Professionelle rengøringsløsninger til erhvervskunder—leveret med kvalitet og pålidelighed.',
+        title: 'Rengøring i Slagelse og omegn',
+        intro: 'Professionel rengøring i Slagelse og omegn - til private hjem og erhverv, med fleksible aftaler tilpasset dine behov.',
         features: [
-          'Kontor- og erhvervsrengøring',
-          'Fleksible servicekontrakter',
-          'Kvalitetskontrolleret personale',
+          'Privat rengøring: fast ugentlig eller 14-dages rengøring, hovedrengøring, flytterengøring og vinduespudsning',
+          'Erhvervsrengøring af kontorer, klinikker og butikker - fleksible aftaler og faste tidspunkter',
+          'Område: Slagelse og omegn, herunder Korsør, Skælskør, Vemmelev, Sørup og Dalmose',
+          'En fast plan, der passer til dit hjem eller din virksomhed',
         ],
       },
       trading: {
@@ -543,18 +548,21 @@ You have the right to access, correct, or delete your personal data. To exercise
         company: 'Virksomhed',
         email: 'E-mail',
         phone: 'Telefon',
+        address: 'Adresse (ved tilbud på rengøring)',
         service: 'Serviceinteresse',
         servicePlaceholder: 'Vælg en service',
         serviceOptions: {
           transport: 'Transportservice',
           importExport: 'Import/Eksport Rådgivning',
-          cleaning: 'Rengøring',
+          privateCleaning: 'Privat rengøring',
+          cleaning: 'Erhvervsrengøring',
           trading: 'International Handel',
           other: 'Andet',
         },
         message: 'Besked',
         submit: 'Send Besked',
         success: 'Tak for din besked! Vi vender tilbage inden for 1-2 hverdage.',
+        error: 'Beklager, din besked kunne ikke sendes. Skriv til info@whiteglobalservices.com eller ring +45 71 49 77 00.',
       },
       faq: {
         title: 'Ofte Stillede Spørgsmål',
