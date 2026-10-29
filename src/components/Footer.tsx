@@ -40,6 +40,9 @@ const Footer = () => {
               <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" />
               <span>{t.footer.address}</span>
             </div>
+            <p className="text-sm text-primary-foreground/80">
+              {t.footer.cvr}
+            </p>
           </div>
 
           {/* Quick Links */}
