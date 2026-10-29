@@ -19,7 +19,7 @@ interface ContactFormProps {
 }
 
 const ContactForm = ({ preselectedService }: ContactFormProps) => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const { toast } = useToast();
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -28,6 +28,7 @@ const ContactForm = ({ preselectedService }: ContactFormProps) => {
     company: '',
     email: '',
     phone: '',
+    address: '',
     service: preselectedService || '',
     message: '',
   });
@@ -36,15 +37,10 @@ const ContactForm = ({ preselectedService }: ContactFormProps) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-
+    // Delivery integration is intentionally disabled pending owner approval,
+    // privacy review and a verified delivery test.
     setIsSubmitting(false);
-    setIsSubmitted(true);
-    toast({
-      title: 'Message Sent',
-      description: t.contact.form.success,
-    });
+    toast({ description: t.contact.form.error, variant: 'destructive' });
   };
 
   const handleChange = (
@@ -71,6 +67,12 @@ const ContactForm = ({ preselectedService }: ContactFormProps) => {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
+      <p role="status" className="rounded-lg bg-muted p-4 text-sm">
+        {language === 'da' ? 'Formularen er ikke tilgængelig endnu. Kontakt os direkte på ' : 'This form is not available yet. Contact us directly at '}
+        <a className="underline break-all" href="mailto:info@whiteglobalservices.com">info@whiteglobalservices.com</a>
+        {language === 'da' ? ' eller ring ' : ' or call '}
+        <a className="underline" href="tel:+4571497700">+45 71 49 77 00</a>.
+      </p>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div className="space-y-2">
           <Label htmlFor="name">{t.contact.form.name} *</Label>
@@ -122,6 +124,17 @@ const ContactForm = ({ preselectedService }: ContactFormProps) => {
       </div>
 
       <div className="space-y-2">
+        <Label htmlFor="address">{t.contact.form.address}</Label>
+        <Input
+          id="address"
+          name="address"
+          value={formData.address}
+          onChange={handleChange}
+          className="bg-background"
+        />
+      </div>
+
+      <div className="space-y-2">
         <Label htmlFor="service">{t.contact.form.service}</Label>
         <Select
           value={formData.service}
@@ -136,6 +149,9 @@ const ContactForm = ({ preselectedService }: ContactFormProps) => {
             </SelectItem>
             <SelectItem value="importExport">
               {t.contact.form.serviceOptions.importExport}
+            </SelectItem>
+            <SelectItem value="privateCleaning">
+              {t.contact.form.serviceOptions.privateCleaning}
             </SelectItem>
             <SelectItem value="cleaning">
               {t.contact.form.serviceOptions.cleaning}
@@ -163,7 +179,7 @@ const ContactForm = ({ preselectedService }: ContactFormProps) => {
         />
       </div>
 
-      <Button type="submit" className="w-full" disabled={isSubmitting}>
+      <Button type="submit" className="w-full" disabled={true}>
         {isSubmitting ? '...' : t.contact.form.submit}
       </Button>
     </form>
